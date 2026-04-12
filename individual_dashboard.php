@@ -21,8 +21,11 @@ if (isset($_GET['delete'])) {
 }
 
 // Quick stats logic for dashboard
+$stats = ['count' => 0, 'total_load' => 0];
 $result = $conn->query("SELECT COUNT(*) as count, SUM(watts*quantity) as total_load FROM appliances");
-$stats = $result->fetch_assoc();
+if ($result) {
+    $stats = $result->fetch_assoc();
+}
 ?>
 
 <!DOCTYPE html>
