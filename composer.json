@@ -1,0 +1,7 @@
+{
+    "name": "nexus/energy-analyzer",
+    "description": "Energy Analyzer Mini Project",
+    "require": {
+        "ext-mysqli": "*"
+    }
+}

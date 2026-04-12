@@ -10,6 +10,14 @@ $pass = '';
 $db   = 'energy_db';
 $port = 3307;
 
+if (!function_exists('mysqli_report') || !class_exists('mysqli')) {
+    die("<div style='padding:20px; font-family:sans-serif; background:#ffeb3b;'>
+            <h3>CRITICAL: MySQLi Extension Missing!</h3>
+            <p>Your Railway server does not have the PHP 'mysqli' extension installed.</p>
+            <p>To fix this, you must push the new <code>composer.json</code> file to your GitHub repository so Railway knows to install it.</p>
+         </div>");
+}
+
 // Check if Railway provided a unified MYSQL_URL string (Very common)
 $url = getenv('MYSQL_URL') ?: getenv('DATABASE_URL');
 
