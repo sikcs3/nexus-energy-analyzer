@@ -1,15 +1,13 @@
 <?php
-// Your Railway Database Credentials
-$host = "mysql.railway.internal";    // Look under MYSQLHOST on Railway
-$user = "root";                      // Look under MYSQLUSER
-$password = "GszRJSpivRAOubPUiFHjYvGcvpKBdDFY"; // Look under MYSQLPASSWORD
-$dbname = "railway";                 // Look under MYSQLDATABASE
-$port = 3306;                       // Look under MYSQLPORT
+// Prioritize Railway environment variables, fallback to local XAMPP configuration
+$host = getenv('MYSQLHOST') ? getenv('MYSQLHOST') : '127.0.0.1';
+$user = getenv('MYSQLUSER') ? getenv('MYSQLUSER') : 'root';
+$pass = getenv('MYSQLPASSWORD') ? getenv('MYSQLPASSWORD') : '';
+$db   = getenv('MYSQLDATABASE') ? getenv('MYSQLDATABASE') : 'energy_db';
+$port = getenv('MYSQLPORT') ? getenv('MYSQLPORT') : 3307;
 
-// Create the connection passing the exact port variable at the end
-$conn = new mysqli($host, $user, $password, $dbname, $port);
+$conn = new mysqli($host, $user, $pass, $db, $port);
 
-// Check if it worked
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
