@@ -1,0 +1,9 @@
+name,watts,hours,quantity
+Air Conditioner,1500,6,1
+Refrigerator,150,24,1
+Ceiling Fan,75,8,3
+LED TV,120,5,2
+Washing Machine,500,1,1
+Water Heater,2000,0.5,1
+Microwave,1200,0.5,1
+Laptop,65,6,2

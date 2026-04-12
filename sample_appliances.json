@@ -1,0 +1,10 @@
+[
+  { "name": "Air Conditioner", "watts": 1500, "hours": 6,   "quantity": 1 },
+  { "name": "Refrigerator",    "watts": 150,  "hours": 24,  "quantity": 1 },
+  { "name": "Ceiling Fan",     "watts": 75,   "hours": 8,   "quantity": 3 },
+  { "name": "LED TV",          "watts": 120,  "hours": 5,   "quantity": 2 },
+  { "name": "Washing Machine", "watts": 500,  "hours": 1,   "quantity": 1 },
+  { "name": "Water Heater",    "watts": 2000, "hours": 0.5, "quantity": 1 },
+  { "name": "Microwave",       "watts": 1200, "hours": 0.5, "quantity": 1 },
+  { "name": "Laptop",          "watts": 65,   "hours": 6,   "quantity": 2 }
+]
