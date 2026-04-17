@@ -143,7 +143,7 @@ if ($res) {
                                 <?php
                                 // We check if table exists first (in case they haven't run the SQL yet)
                                 $val = $conn->query("SHOW TABLES LIKE 'building_appliances'");
-                                if ($val->num_rows > 0) {
+                                if ($val && $val->num_rows > 0) {
                                     $result = $conn->query("SELECT * FROM building_appliances ORDER BY building_name, apartment_number");
                                     if ($result->num_rows > 0) {
                                         while ($row = $result->fetch_assoc()) {
